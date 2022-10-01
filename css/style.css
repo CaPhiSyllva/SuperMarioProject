@@ -4,9 +4,7 @@
     box-sizing: border-box;
     
 }
-.color{
-     background: linear-gradient(#FFF173,#F7E757);
-}
+
 .refreshing{
     display: block ;
     margin-left: auto;
