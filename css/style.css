@@ -1,26 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
-.refreshing{
-    display: block ;
-   
+.refreshing {
+    display: block;
+    align-items: center;
     padding: 0 auto;
-    width:90px;
+    width: 90px;
     height: 90px;
     position: fixed;
-    bottom:0;
-    top:250px;
+    bottom: 0;
+    top: 250px;
     right: 250px;
     left: 45%;
-   border: 5px solid #FEB22B;
+    border: 5px solid #FEB22B;
     border-radius: 10px 10px 10px 10px;
-    
 }
-.game-board{
+
+.game-board {
     width: 100%;
     height: 400px;
     border-bottom: 10px solid #2FAD1C;
@@ -28,83 +27,73 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87ceeb, #e0f6ff);
-   
-   
 }
 
-.refresh { 
-display: block ;
-margin-left: auto;
-margin-right: auto;
-width:100px;
-height: 100px;
-background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzAiIGhlaWdodD0iMzAiCnZpZXdCb3g9IjAgMCAzMCAzMCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDE1IDMgQyAxMi4wMzEzOTggMyA5LjMwMjgyMDIgNC4wODM0Mzg0IDcuMjA3MDMxMiA1Ljg3NSBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgOC41MDU4NTk0IDcuMzk0NTMxMiBDIDEwLjI1NDA3IDUuOTAwMDkyOSAxMi41MTY2MDIgNSAxNSA1IEMgMjAuMTk2NTYgNSAyNC40NTA5ODkgOC45Mzc5MjY3IDI0Ljk1MTE3MiAxNCBMIDIyIDE0IEwgMjYgMjAgTCAzMCAxNCBMIDI2Ljk0OTIxOSAxNCBDIDI2LjQzNzkyNSA3Ljg1MTY1ODggMjEuMjc3ODM5IDMgMTUgMyB6IE0gNCAxMCBMIDAgMTYgTCAzLjA1MDc4MTIgMTYgQyAzLjU2MjA3NSAyMi4xNDgzNDEgOC43MjIxNjA3IDI3IDE1IDI3IEMgMTcuOTY4NjAyIDI3IDIwLjY5NzE4IDI1LjkxNjU2MiAyMi43OTI5NjkgMjQuMTI1IEEgMS4wMDAxIDEuMDAwMSAwIDEgMCAyMS40OTQxNDEgMjIuNjA1NDY5IEMgMTkuNzQ1OTMgMjQuMDk5OTA3IDE3LjQ4MzM5OCAyNSAxNSAyNSBDIDkuODAzNDQgMjUgNS41NDkwMTA5IDIxLjA2MjA3NCA1LjA0ODgyODEgMTYgTCA4IDE2IEwgNCAxMCB6Ij48L3BhdGg+PC9zdmc+') 50% 50% no-repeat;
-background-size: 100%; 
+.refresh {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzAiIGhlaWdodD0iMzAiCnZpZXdCb3g9IjAgMCAzMCAzMCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDE1IDMgQyAxMi4wMzEzOTggMyA5LjMwMjgyMDIgNC4wODM0Mzg0IDcuMjA3MDMxMiA1Ljg3NSBBIDEuMDAwMSAxLjAwMDEgMCAxIDAgOC41MDU4NTk0IDcuMzk0NTMxMiBDIDEwLjI1NDA3IDUuOTAwMDkyOSAxMi41MTY2MDIgNSAxNSA1IEMgMjAuMTk2NTYgNSAyNC40NTA5ODkgOC45Mzc5MjY3IDI0Ljk1MTE3MiAxNCBMIDIyIDE0IEwgMjYgMjAgTCAzMCAxNCBMIDI2Ljk0OTIxOSAxNCBDIDI2LjQzNzkyNSA3Ljg1MTY1ODggMjEuMjc3ODM5IDMgMTUgMyB6IE0gNCAxMCBMIDAgMTYgTCAzLjA1MDc4MTIgMTYgQyAzLjU2MjA3NSAyMi4xNDgzNDEgOC43MjIxNjA3IDI3IDE1IDI3IEMgMTcuOTY4NjAyIDI3IDIwLjY5NzE4IDI1LjkxNjU2MiAyMi43OTI5NjkgMjQuMTI1IEEgMS4wMDAxIDEuMDAwMSAwIDEgMCAyMS40OTQxNDEgMjIuNjA1NDY5IEMgMTkuNzQ1OTMgMjQuMDk5OTA3IDE3LjQ4MzM5OCAyNSAxNSAyNSBDIDkuODAzNDQgMjUgNS41NDkwMTA5IDIxLjA2MjA3NCA1LjA0ODgyODEgMTYgTCA4IDE2IEwgNCAxMCB6Ij48L3BhdGg+PC9zdmc+') 50% 50% no-repeat;
+    background-size: 100%;
 }
 
-.pipe{
+.pipe {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     width: 80px;
-  
     animation: pipe-animation 2.5s infinite linear;
-
 }
 
-.mario{
+.mario {
     position: absolute;
     bottom: 0;
     width: 150px;
-   
 }
 
-.clouds{
+.clouds {
     position: absolute;
     width: 450px;
     animation: clouds-animation 15s infinite linear;
-   
 }
 
-.jump{
-     animation: jump 450ms ease-out; 
+.jump {
+    animation: jump 450ms ease-out;
 }
 
-@keyframes pipe-animation{
-    from{
+@keyframes pipe-animation {
+    from {
         right: 0;
     }
-
-    to{
+    to {
         right: 100%
     }
 }
 
-@keyframes jump{
-    0%{
+@keyframes jump {
+    0% {
         bottom: 0;
     }
-
-    40%{
-        bottom:180px;
-    }
-    50%{
+    40% {
         bottom: 180px;
     }
-    60%{
-        bottom:180px;
+    50% {
+        bottom: 180px;
     }
-
-    100%{
+    60% {
+        bottom: 180px;
+    }
+    100% {
         bottom: 0;
     }
 }
 
-@keyframes clouds-animation{
-    from{
-        right:-550px;
+@keyframes clouds-animation {
+    from {
+        right: -550px;
     }
-
-    to{
+    to {
         right: 100%;
     }
 }
